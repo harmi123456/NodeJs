@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>CRUD</title>
+
+    <!-- //font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <img src="data:image/png;base64,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"
+                alt="">
+        </div>
+
+        <nav>
+            <a href="">Home</a>
+            <a href="">About</a>
+            <a href="">Services</a>
+            <a href="">Blog</a>
+            <a href="">Contact</a>
+        </nav>
+
+        <div class="search">
+            <input type="text" placeholder="Search Here">
+            <div class="sea"><i class="fa-solid fa-magnifying-glass"></i></div>
+
+        </div>
+
+    </header>
+
+
+    <div class="book-container">
+
+        <%books.map((e,i)=> {%>
+
+            <div class="book">
+                <img src="<%= e.image %>" alt="">
+                <div class="content">
+                    <h1> Book No: <%= e.id %>
+                    </h1>
+                    <h2>
+                        <%= e.name %>
+                    </h2>
+                    <h3>
+                        <%= e.author %>
+                    </h3>
+                    <p>
+                        <%= e.price %>
+                    </p>
+                    <h4>
+                        <%= e.releasedDate %>
+                    </h4>
+                    <div class="actions">
+                        <button><a href="/editData/<%=e.id%>"><i class="fa-regular fa-pen-to-square"></i></a></button>
+                        <button><a href="/deleteData?id=<%= e.id %>"><i
+                                    class="fa-solid fa-trash-arrow-up"></i></a></button>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+
+
+                <div class="add" id="add">
+                    <h1>Add More Items Here</h1>
+                    <div class="plus"><i class="fa-solid fa-plus"></i></div>
+                    <p>Click the '+' button to add new items to the inventory. Fill in all necessary details carefully.
+                    </p>
+                </div>
+
+                <form action="/addData" method="post" id="form" class="form-container">
+                    <input type="text" placeholder="Enter name : " name="name">
+                    <input type="text" placeholder="Enter author name : " name="author">
+                    <input type="text" placeholder="Enter Price : " name="price">
+                    <input type="text" placeholder=" Enter releasedDate : " name="releasedDate">
+                    <button type="submit">submit</button>
+                </form>
+
+    </div>
+
+
+
+</body>
+
+</html>
+
+<script>
+    document.getElementById("add").addEventListener("click", function () {
+        document.getElementById("add").classList.add("hidden");
+
+        const formDiv = document.getElementById("form");
+        formDiv.classList.add("show");
+    });
+
+    document.getElementById("back").addEventListener("click", function () {
+
+        const formDiv = document.getElementById("form");
+        formDiv.classList.remove("show");
+
+
+        document.getElementById("add").classList.remove("hidden");
+    });
+
+
+</script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EDIT</title>
+
+    <style>
+        .edit{
+            height: 100vh;
+            width: 100%;
+            border: 2px solid;
+            background: linear-gradient(rgba(0, 0, 0, 0.306),rgba(0, 0, 0, 0.325)), url("https://images.unsplash.com/photo-1619431486830-4477e6e0783d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8ZWRpdGluZyUyMGJhY2tncm91bmR8ZW58MHx8MHx8fDA=");
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-position: center;
+        }
+        .edit-heading {
+            font-size: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #e94e77; 
+            text-shadow: 2px 2px 5px rgba(189, 53, 94, 0.7); 
+            margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(30px); 
+            animation: fadeSlideUp 2s ease-out forwards; 
+        }
+
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+
+        .form-container {
+            background: #f4f4f4;
+            border-radius: 12px;
+            padding: 20px 30px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .form-container label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #e94e77;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .submit-btn:hover {
+            background-color: #d1406c;
+        }
+
+        .form-container input:focus {
+            outline: none;
+            border: 2px solid #e94e77;
+            background-color: #fef9f9;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                width: 95%;
+            }
+        }
+
+
+    </style>
+
+</head>
+
+<body class="edit">
+    <form action="/updateData" method="post" class="form-container">
+        <h2 class="edit-heading">EDIT DATA AS PER YOUR NEED...</h2>
+        <input hidden type="text" placeholder="Id" value="<%=singleData.id%>" name="id">
+        <input type="text" placeholder="Enter Name : " value="<%=singleData.name%>" name="name" >
+        <input type="text" placeholder="Enter author name : " value="<%=singleData.author%>" name="author">
+        <input type="text" placeholder="Enter price : " value="<%=singleData.price%>" name="price">
+        <input type="date" placeholder="Enter date :" value="<%=singleData.releasedDate%>" name="releasedDate">
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</body>
+
+</html>
