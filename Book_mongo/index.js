@@ -6,7 +6,7 @@ const db = require("./config/db")
 const schema = require("./model/firstSchema")
 
 app.set("view engine", "ejs")
-app.use(express.static('public'))
+    app.use(express.static('public'))
 app.use(express.urlencoded())
 app.use(express.json());
 
@@ -22,7 +22,7 @@ app.get("/", async (req,res) => {
 
 app.post("/addData", async (req,res) => {
     await schema.create(req.body);
-    data && res.redirect("/")
+    res.redirect("/")
 })
 
 app.get("/deleteData", async (req, res) => {

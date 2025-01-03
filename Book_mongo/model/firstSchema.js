@@ -5,11 +5,11 @@ const schema = mongoose.Schema({
         type: String,
         require: true
     },
-    subject: {
+    author: {
         type: String,
         require: true
     },
-    city: {
+    price: {
         type: String,
         require: true
     },
