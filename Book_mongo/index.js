@@ -6,7 +6,7 @@ const db = require("./config/db")
 const schema = require("./model/firstSchema")
 
 app.set("view engine", "ejs")
-    app.use(express.static('public'))
+app.use(express.static('public'))
 app.use(express.urlencoded())
 app.use(express.json());
 

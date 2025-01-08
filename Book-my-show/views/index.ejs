@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Book My Show</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- //font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body id="body">
+
+    <header>
+
+        <div class="logo">
+            <img src="/img/logo.png" alt="">
+        </div>
+
+        <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities">
+        </div>
+
+        <div class="city-dropdown">
+            <h5>Rajkot</h5>
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+
+        <div class="popup-box" id="popup">
+
+            <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search for Movies, Events, Plays, Sports and Activities">
+            </div>
+            <h3>Popular Cities</h3>
+
+            <div class="city">
+                <div class="cities">
+                    <img src="/img/mumbai.png" alt="">
+                    <span>Mumbai</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/ncr.png" alt="">
+                    <span>Delhi-NCR</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/bang.png" alt="">
+                    <span>Bengaluru</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/hyd.png" alt="">
+                    <span>Hydrabad</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/chd.png" alt="">
+                    <span>Chandigarh</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/ahd.png" alt="">
+                    <span>Ahmedabad</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/chen.png" alt="">
+                    <span>Chennai</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/pune.png" alt="">
+                    <span>Pune</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/kolk.png" alt="">
+                    <span>Kolkata</span>
+                </div>
+                <div class="cities">
+                    <img src="/img/koch.jpeg" alt="">
+                    <span>Kochi</span>
+                </div>
+
+            </div>
+
+            <h3 class="view-all" id="viewAllButton">View All Cities</h3>
+            <!-- <div >View All Cities</div> -->
+
+            <div class="city-list" id="cityList" style="display: none;">
+                <ul>
+                    <li>Rajkot</li>
+                    <li>Ahmedabad</li>
+                    <li>Surat</li>
+                    <li>Vadodara</li>
+                    <li>Junagadh</li>
+                </ul>
+                <div class="hide-cities" id="hideCitiesButton">Hide Cities</div>
+            </div>
+
+
+            <button id="closePopup">Close</button>
+
+        </div>
+
+    </header>
+
+</body>
+
+</html>
+
+<script>
+    const cityDropdown = document.querySelector('.city-dropdown');
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('closePopup');
+    const body = document.getElementById('body')
+
+    cityDropdown.addEventListener('click', () => {
+        popup.style.display = 'block';
+        popup.style.animation = 'fadeInFromTop 0.5s ease forwards';
+        // body.style.filter = 'brightness(90%)'
+
+    });
+
+    closePopup.addEventListener('click', () => {
+        popup.style.display = 'none'; // Hide the popup
+    });
+
+    // Optional: Close the popup when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target !== popup && !popup.contains(event.target) && event.target !== cityDropdown && !cityDropdown.contains(event.target)) {
+            popup.style.display = 'none';
+        }
+    });
+
+
+    //view city
+    const viewAllButton = document.getElementById('viewAllButton');
+    const cityList = document.getElementById('cityList');
+    const hideCitiesButton = document.getElementById('hideCitiesButton');
+
+    // Show the city list and change text to "Other Cities"
+    viewAllButton.addEventListener('click', () => {
+        cityList.style.display = 'block'; // Show the city list
+        viewAllButton.textContent = 'Other Cities'; // Change button text
+        viewAllButton.style.display = 'none'; // Hide this button
+    });
+
+    // Hide the city list and reset text to "View All Cities"
+    hideCitiesButton.addEventListener('click', () => {
+        cityList.style.display = 'none'; // Hide the city list
+        viewAllButton.textContent = 'View All Cities'; // Reset button text
+        viewAllButton.style.display = 'block'; // Show this button
+    });
+
+</script>

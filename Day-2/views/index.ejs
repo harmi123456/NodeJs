@@ -27,6 +27,7 @@
 
         
         <tbody>
+
            <%students.map((e,i) =>{%>
                 <tr>
                     <td><%=e.id%></td>
@@ -38,9 +39,10 @@
                     <td>
                         <button><a href="/deleteData?id=<%=e.id%>"> Delete </a></button>
                     </td>
-                </tr>
+                </tr>   
                 <%
             })%>
+                
         </tbody>
 
     </table>

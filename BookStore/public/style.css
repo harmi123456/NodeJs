@@ -87,6 +87,8 @@ header{
 }
 
 .book {
+    height: 100px;
+    overflow: hidden;
     border: 1px solid #ddd;
     border-radius: 8px;
     width: 50%;
