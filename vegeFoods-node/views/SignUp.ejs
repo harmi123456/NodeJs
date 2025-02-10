@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- //bootStrape -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="SignUp-form login-page">
+
+        <div class="col-md-8 col-lg-7 col-xl-6 girl-img">
+            <!-- <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg" class="img-fluid" alt="Phone image"> -->
+
+            <img src="/images/slider/slider-img-1.jpg"class="img-fluid login-img" alt="Phone image">
+
+        </div>
+
+
+        <div class="container-fluid multy-form">
+
+            <div class="row justify-content-center">
+                <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-5 text-center p-3 mb-2"
+                    style="width: 80%; height: 100%; margin-top: 60px; ">
+                    <div style="border: 2px solid transparent; margin-top: -50px;">
+
+                        <h5 id="heading">Sign Up Your User Account</h5>
+                        <p>Fill all form field to go to next step</p>
+
+
+                        <form id="msform" action="addUser" method="post" enctype="multipart/form-data">
+
+                            <!-- progressbar -->
+                            <ul id="progressbar">
+                                <li class="active" id="account"><strong>Account</strong></li>
+                                <li id="personal"><strong>Personal</strong></li>
+                                <li id="payment"><strong>Image</strong></li>
+                                <li id="confirm"><strong>Finish</strong></li>
+                            </ul>
+
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div> <br> 
+                            
+                            <!-- fieldsets -->
+
+                            <!-- //first field -->
+
+                            <fieldset>
+
+                                <div class="form-card">
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Account Information:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 1 - 5</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- //email -->
+
+                                    <label class="fieldlabels">Email: *</label>
+                                    <input type="email" name="email" placeholder="Email Id" />
+
+                                    <!-- //userName -->
+                                    <label class="fieldlabels">Username: *</label>
+                                    <input type="text" name="userName" placeholder="UserName" />
+
+                                    <!-- //Password -->
+                                    <label class="fieldlabels">Password: *</label>
+                                    <input type="password" name="password" placeholder="Password" />
+
+                                    <!-- //Confirm Password -->
+                                    <label class="fieldlabels">Confirm Password: *</label>
+                                    <input type="password" name="conPass" placeholder="Confirm Password" />
+
+                                </div>
+                                <input type="button" name="next" class="next action-button me-3" value="Next" />
+
+                            </fieldset>
+
+                            <!-- //second fields -->
+                            <fieldset>
+
+                                <div class="form-card">
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Personal Information:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 2 - 5</h2>
+                                        </div>
+                                    </div>
+
+                                    <label class="fieldlabels">First Name: *</label>
+                                    <input type="text" name="fname" placeholder="First Name" />
+
+                                    <label class="fieldlabels">Last Name: *</label>
+                                    <input type="text" name="lname" placeholder="Last Name" />
+
+                                    <label class="fieldlabels">Contact No.: *</label>
+                                    <input type="text" name="phon1" placeholder="Contact No." />
+
+                                    <label class="fieldlabels">Alternate Contact No.: *</label>
+                                    <input type="text" name="phon2" placeholder="Alternate Contact No." />
+
+                                </div>
+
+                                <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="previous" class="previous action-button-previous"
+                                    value="Previous" />
+
+                            </fieldset>
+
+
+                            <!-- Third fields -->
+                            <fieldset>
+                                <div class="form-card">
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Image Upload:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 3 - 5</h2>
+                                        </div>
+                                    </div>
+
+                                    <label class="fieldlabels">Upload Your Photo:</label>
+                                    <input type="file" name="pic" accept="image/*">
+
+                                    <label class="fieldlabels">Address: *</label>
+                                    <input type="text" name="address" placeholder="enter Address" />
+
+                                    <label class="fieldlabels">Profession: *</label>
+                                    <input type="text" name="profession" placeholder="Your Profession" />                                  
+
+                                </div>
+
+                                <input type="button" name="next" class="next action-button" value="Next" />
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+
+                            </fieldset>
+
+
+                            <!-- links fields -->
+
+                            <fieldset>
+
+                                <div class="form-card">
+
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Social Link Information:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 4 - 5</h2>
+                                        </div>
+                                    </div>
+
+                                    <!-- //email -->
+
+                                    <label class="fieldlabels">Github: *</label>
+                                    <input type="url" name="github" placeholder="Github Link" />
+
+                                    <!-- //userName -->
+                                    <label class="fieldlabels">Twitter: *</label>
+                                    <input type="url" name="twitter" placeholder="Twitter Link" />
+
+                                    <!-- //Password -->
+                                    <label class="fieldlabels">Instagram: *</label>
+                                    <input type="url" name="insta" placeholder="Instagram Link" />
+
+                                    <!-- //Confirm Password -->
+                                    <label class="fieldlabels">Face Book: *</label>
+                                    <input type="url" name="fb" placeholder="Facebook Link" />
+
+                                </div>
+                                <input type="submit" name="next" class="next action-button" value="SUBMIT" />
+                                <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+
+                            </fieldset>
+
+
+
+                            <!-- //last page -->
+                            <fieldset>
+
+                                <div class="form-card">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="fs-title">Finish:</h2>
+                                        </div>
+                                        <div class="col-5">
+                                            <h2 class="steps">Step 5 - 5</h2>
+                                        </div>
+                                    </div> <br><br>
+
+                                    <h2 class="purple-text text-center"><strong>SUCCESS !</strong></h2> <br>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png"
+                                                class="fit-image">
+                                        </div>
+                                    </div> <br><br>
+
+                                    <div class="row justify-content-center">
+                                        <div class="col-7 text-center">
+                                            <h5 class="purple-text text-center">You Have Successfully Signed Up</h5>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </fieldset>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
+
+
+<script>
+    $(document).ready(function () {
+
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var opacity;
+        var current = 1;
+        var steps = $("fieldset").length;
+
+        setProgressBar(current);
+
+        $(".next").click(function () {
+
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+
+            //Add Class Active
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({ opacity: 0 }, {
+                step: function (now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    next_fs.css({ 'opacity': opacity });
+                },
+                duration: 500
+            });
+            setProgressBar(++current);
+        });
+
+        $(".previous").click(function () {
+
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
+
+            //Remove class active
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            //show the previous fieldset
+            previous_fs.show();
+
+            //hide the current fieldset with style
+            current_fs.animate({ opacity: 0 }, {
+                step: function (now) {
+                    // for making fielset appear animation
+                    opacity = 1 - now;
+
+                    current_fs.css({
+                        'display': 'none',
+                        'position': 'relative'
+                    });
+                    previous_fs.css({ 'opacity': opacity });
+                },
+                duration: 500
+            });
+            setProgressBar(--current);
+        });
+
+        function setProgressBar(curStep) {
+            var percent = parseFloat(100 / steps) * curStep;
+            percent = percent.toFixed();
+            $(".progress-bar")
+                .css("width", percent + "%")
+        }
+
+        $(".submit").click(function () {
+            return false;
+        })
+
+    });
+</script>
