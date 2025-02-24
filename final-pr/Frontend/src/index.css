@@ -1,0 +1,288 @@
+/* //SignUp form */
+
+/* Modern Clean SignIn Form */
+.signInForm-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f5f7fa;
+    padding: 20px;
+}
+
+/* Form Box Styling */
+.signInForm-box {
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title Styling */
+.signInForm-title {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Input Fields */
+.signInForm-input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.signInForm-input:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.2);
+}
+
+/* Submit Button */
+.signInForm-btn {
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: #fff;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.signInForm-btn:hover {
+    background: linear-gradient(135deg, #a777e3, #6e8efb);
+}
+
+/* Error Message */
+.signInForm-error {
+    color: #e74c3c;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* SignUp Link */
+.signInForm-link {
+    display: inline-block;
+    margin-top: 25px;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.signInForm-link:hover {
+    color: #6e8efb;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .signInForm-box {
+        padding: 30px 20px;
+    }
+
+    .signInForm-title {
+        font-size: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* //SignUp css */
+
+/* Container Styling */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    padding: 20px;
+}
+
+/* SignUp Box Styling */
+.signup-box {
+    background: #fff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.signup-box:hover {
+    transform: translateY(-10px);
+}
+
+/* Title Styling */
+.signup-box h1 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Input Fields */
+.signup-box input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.signup-box input:focus {
+    border-color: #6e8efb;
+    box-shadow: 0 0 10px rgba(110, 142, 251, 0.3);
+}
+
+/* Sign Up Button */
+.signup-btn {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+    padding: 14px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.signup-btn:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .signup-box {
+        padding: 30px 20px;
+    }
+
+    .signup-box h1 {
+        font-size: 2rem;
+    }
+}
+
+
+
+
+
+
+/* //Dashboard css */
+
+/* Main Dashboard Container */
+.dashboard-container {
+    padding: 40px;
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Title Styling */
+.dashboard-title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Task Section */
+.task-section {
+    background: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Task Form Styling */
+.task-form input {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-form input:focus {
+    border-color: #f6d365;
+    box-shadow: 0 0 10px rgba(253, 160, 133, 0.3);
+}
+
+/* Submit Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .task-section {
+        padding: 30px 20px;
+    }
+
+    .dashboard-title {
+        font-size: 2rem;
+    }
+}
