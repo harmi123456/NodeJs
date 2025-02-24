@@ -20,6 +20,13 @@ const schema = mongoose.Schema({
     gender: {
         type: String,
         require: true
+    },
+
+    taskName: {
+        type: String,
+    },
+    priority: {
+        type: String,
     }
 
 })

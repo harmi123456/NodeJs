@@ -40,13 +40,31 @@ module.exports.viewAdmin = async (req, res) => {
 }
 
 
-module.exports.dashboard = async (req, res) => {
-    let data = await schema.find({})
-    res.render("dashboard", {data})
+module.exports.addData = async (req, res) => {
+    console.log(req.body) 
+
+    await schema.create(req.body).then(() => {
+        res.status(200).json({"msg" : "Data Added Successfully !"})
+    })
 }
 
-module.exports.addData = async (req, res) => {
-    await schema.create(req.body).then((data) => {
-        res.redirect("/dashboard")
+module.exports.viewData = async (req, res) => {
+    console.log(req.body)
+
+    await schema.find(req.body).then((data) => {
+        res.status(200).json({"data": data})
+    })
+}
+
+
+module.exports.deleteData = async (req, res) => {
+    await schema.findByIdAndDelete(req.query.id).then(() => {
+        res.status(200).json({msg: "Data deleted successfully !"})
+    })
+}
+
+module.exports.updateData = async (req, res) => {
+    await schema.findByIdAndUpdate(req.query.id, req.body).then(() => {
+        res.status(200).json({msg: "Data Updated successfully !"})
     })
 }

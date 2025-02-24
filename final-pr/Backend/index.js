@@ -6,9 +6,10 @@ const schema = require("./model/schema")
 const db = require("./config/db")
 const cors = require("cors")
 
-app.use(express.urlencoded())
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json())
-app.use(cors())
+
+app.use(cors({origin : "http://localhost:5173"}))
 
 app.use("/", require("./routes/route"))
 
